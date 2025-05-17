@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Lens - Catálogo</title>
+</head>
+<body>
+    <header class="top-bar">
+        <img src="../img/User.png" alt="Perfil" class="icono-perfil" />
+        <img src="../img/logo.png" alt="Logo Cine Lens" class="logo" />
+        <div class="barra-busqueda">
+            <input type="text" placeholder="Buscar..." />
+        </div>
+    </header>
+
+    <main class="contenido">
+        <section class="peliculas">
+            <div class="titulo-flecha">
+                <h2>Películas</h2>
+                <div class="filtros-contenedor">
+                    <span class="filtros-text">Filtros</span>
+                    <img src="../img/flecha-correcta.png" alt="filtros" class="flecha-filtros">
+                </div>
+            </div>
+            <div class="grid-peliculas"></div>
+            <button id="btn-mas" class="btn-mas">Más</button>
+        </section>
+    </main>
+
+    <nav class="menu-inferior">
+        <a href="/index.html"><button> <img src="../img/casa.png" alt="casa-index"></button></a>
+        <a href="#"><button> <img src="../img/categoria.png" alt="catalogo"></button></a>
+        <a href="./lista-comentarios.html"><button> <img src="../img/msj.png" alt=""></button></a>
+    </nav>
+
+    <script src="../js/catalogo.js"></script>
+</body>
+</html>
