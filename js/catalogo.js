@@ -15,7 +15,11 @@ function cargarPeliculas() {
                 const img = document.createElement('img');
                 img.src = imgBase + peli.poster_path;
                 img.alt = peli.title;
-                grid.appendChild(img);
+                
+                const link = document.createElement('a');
+                link.href = `./pelicula/pelicula.html?id=${peli.id}`;
+                link.appendChild(img);
+                grid.appendChild(link);
             });
             cargadas += pelis.length;
             if (pelis.length < restantes && data.page < data.total_pages) {

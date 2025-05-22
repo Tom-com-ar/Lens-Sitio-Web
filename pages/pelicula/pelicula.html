@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Document</title>
+</head>
+<body class="pelicula-page">
+    <header class="top-bar">
+        <img src="../../img/User.png" alt="Perfil" class="icono-perfil" />
+        <img src="../../img/logo.png" alt="Logo Cine Lens" class="logo" />
+        <div class="barra-busqueda">
+            <input type="text" placeholder="Buscar..." />
+        </div>
+        <nav class="menu-superior">
+            <a href="../../index.html" class="menu-link">Inicio</a>
+            <a href="../../pages/catalogo.html" class="menu-link">Catalogo</a>
+            <a href="../../pages/lista-comentarios.html" class="menu-link">Comentarios</a>
+            <div class="barra-busqueda-nav">
+                <input type="text" placeholder="Buscar..." />
+                <button class="btn-buscar"><img src="../../img/busqueda-de-lupa.png" alt="Buscar"></button>
+            </div>
+        </nav>
+        <div class="usuario-menu">
+            <img src="../../img/User.png" alt="Perfil" class="icono-perfil-nav" />
+            <span class="usuario-nombre">Usuario</span>
+            <img src="../../img/flecha-correcta.png" alt="Desplegar" class="flecha-usuario" />
+        </div>
+    </header>
+
+    <main class="contenido">
+        <section class="movie-detail-page">
+            <div class="movie-poster-container">
+                <img src="" alt="" class="movie-poster">
+                <div class="movie-overlay">
+                    <div class="comment-icon-placeholder">
+                        <img src="../../img/msj.png" alt="Comentarios">
+                    </div>
+                </div>
+            </div>
+
+            <section class="movie-info-section">
+                <div class="movie-rating">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="movie-metadata">
+                    <h1 class="movie-title"></h1>
+                    <span class="movie-year"></span>
+                    <span class="movie-genre"></span>
+                    <span class="movie-duration"></span>
+                </div>
+            
+                <button class="buy-tickets-button">Comprar Entradas</button>
+
+                <p class="movie-synopsis"></p>
+
+                <div class="video-player-placeholder">
+                    <img src="" alt="Miniatura del trailer" class="trailer-thumbnail">
+                    <img src="../../img/tocar.png" alt="Reproducir trailer" class="play-icon">
+                    <div class="video-message"></div>
+                </div>
+
+                <h2 class="actors-title">Actores</h2>
+                <p class="movie-actors-list"></p>
+            </section>
+        </section>
+    </main>
+
+    <nav class="menu-inferior">
+        <a href="../../index.html"><button> <img src="../../img/casa.png" alt="casa-index"></button></a>
+        <a href="../catalogo.html"><button> <img src="../../img/categoria.png"
+                    alt="catalogo"></button></a>
+        <a href="../lista-comentarios.html"><button> <img src="../../img/msj.png" alt=""></button></a>
+    </nav>
+
+    <script src="../../js/pelicula.js"></script>
+</body>
+</html>

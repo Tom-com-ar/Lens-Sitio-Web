@@ -11,7 +11,11 @@ fetch(url)
             const img = document.createElement('img');
             img.src = imgBase + peli.poster_path;
             img.alt = peli.title;
-            carrusel_populares.appendChild(img);
+           
+            const link = document.createElement('a');
+            link.href = `pages/pelicula/pelicula.html?id=${peli.id}`;
+            link.appendChild(img);
+            carrusel_populares.appendChild(link);
         });
     });
 
@@ -25,7 +29,11 @@ fetch(url)
             const img = document.createElement('img');
             img.src = imgBase + peli.poster_path;
             img.alt = peli.title;
-            grid_peliculas.appendChild(img);
+           
+            const link = document.createElement('a');
+            link.href = `pages/pelicula/pelicula.html?id=${peli.id}`;
+            link.appendChild(img);
+            grid_peliculas.appendChild(link);
         });
     });
 
@@ -49,9 +57,14 @@ function cargarRecomendados() {
                     <img src="${imgBase + peli.poster_path}" alt="${peli.title}">
                     <div class="info-tarjeta">
                         <h3 class="titulo-tarjeta">${peli.title}</h3>
-                        <button class="btn-vermas-tarjeta"><span>▶</span> Ver Mas</button>
+                        <button class="btn-vermas-tarjeta" data-movie-id="${peli.id}"><span>▶</span> Ver Mas</button>
                     </div>
                 `;
+               
+                // Añadir event listener al botón "Ver Mas"
+                tarjetas[i].querySelector('.btn-vermas-tarjeta').addEventListener('click', () => {
+                    window.location.href = `pages/pelicula/pelicula.html?id=${peli.id}`;
+                });
             });
         });
 }
@@ -67,6 +80,7 @@ fetch(url)
         data.results.slice(0, 6).forEach(peli => {
             const card = document.createElement('div');
             card.className = 'pelicula-card';
+            card.dataset.movieId = peli.id; // Guardar el ID de la película
 
             const img = document.createElement('img');
             img.src = imgBase + peli.poster_path;
@@ -79,5 +93,10 @@ fetch(url)
             card.appendChild(img);
             card.appendChild(nombre);
             grid_peliculas.appendChild(card);
+           
+            // Añadir event listener a la tarjeta de película
+            card.addEventListener('click', () => {
+                window.location.href = `pages/pelicula/pelicula.html?id=${peli.id}`;
+            });
         });
     });
