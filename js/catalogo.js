@@ -25,9 +25,13 @@ function cargarPeliculas() {
                 pagina++;
             }
         });
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     cargarPeliculas();
     document.getElementById('btn-mas').addEventListener('click', cargarPeliculas);
 });
+
+
+

@@ -8,13 +8,28 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<body>
+<body  class="index-page">
     <header class="top-bar">
         <img src="./img/User.png" alt="Perfil" class="icono-perfil" />
         <img src="./img/logo.png" alt="Logo Cine Lens" class="logo" />
         <div class="barra-busqueda">
             <input type="text" placeholder="Buscar..." />
         </div>
+        <nav class="menu-superior">
+            <a href="#" class="menu-link">Inicio</a>
+            <a href="./pages/catalogo.html" class="menu-link">Catalogo</a>
+            <a href="./pages/lista-comentarios.html" class="menu-link">Comentarios</a>
+            <div class="barra-busqueda-nav">
+                <input type="text" placeholder="Buscar..." />
+                <button class="btn-buscar"><img src="./img/busqueda-de-lupa.png" alt="Buscar"></button>
+            </div>
+        </nav>
+        <div class="usuario-menu">
+            <img src="./img/User.png" alt="Perfil" class="icono-perfil-nav" />
+            <span class="usuario-nombre">Usuario</span>
+            <img src="./img/flecha-correcta.png" alt="Desplegar" class="flecha-usuario" />
+        </div>
+
     </header>
 
     <main class="contenido">
@@ -31,6 +46,23 @@
             <div class="grid-populares"></div>
         </section>
 
+        <section class="recomendados-size">
+            <div class="tarjeta-izq">
+                <img src="" alt="">
+                <div class="info-tarjeta">
+                    <h3 class="titulo-tarjeta"></h3>
+                    <button class="btn-vermas-tarjeta"><span>▶</span> Ver Mas</button>
+                </div>
+            </div>
+            <div class="tarjeta-der">
+                <img src="" alt="">
+                <div class="info-tarjeta">
+                    <h3 class="titulo-tarjeta"></h3>
+                    <button class="btn-vermas-tarjeta"><span>▶</span> Ver Mas</button>
+                </div>
+            </div>
+        </section>
+
         <section class="peliculas">
             <div class="titulo-flecha">
                 <h2>Películas</h2>
@@ -43,6 +75,12 @@
             </div>
             </div>
             <div class="grid-peliculas"></div>
+            <div class="grid-peliculas-size">
+                <div class="pelicula-card">
+                    <img src="" alt="">
+                    <div class="nombre-pelicula"></div>
+                </div>
+            </div>
         </section>
     </main>
 
