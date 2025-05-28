@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Lens - Catálogo</title>
 </head>
+
 <body class="catalogo-page">
     <header class="top-bar">
         <img src="../img/User.png" alt="Perfil" class="icono-perfil" />
@@ -34,13 +36,9 @@
         <section class="peliculas">
             <div class="titulo-flecha">
                 <h2>Películas</h2>
-                <div class="filtros-contenedor">
-                    <span class="filtros-text">Filtros</span>
-                    <img src="../img/flecha-correcta.png" alt="filtros" class="flecha-filtros">
-                </div>
+                <button id="abrir-filtros" class="btn-filtrar-open">Filtros</button>
             </div>
             <div class="grid-peliculas"></div>
-            <button id="btn-mas" class="btn-mas">Más</button>
         </section>
     </main>
 
@@ -50,6 +48,36 @@
         <a href="./lista-comentarios.html"><button> <img src="../img/msj.png" alt=""></button></a>
     </nav>
 
+    <div id="modal-filtros" class="modal-filtros">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+            <h2>Filtrar Películas</h2>
+            <form id="form-filtros">
+                <label>Género:
+                    <select id="filtro-genero">
+                        <option value="">Todos</option>
+                    </select>
+                </label>
+                <label>Año desde:
+                    <input type="number" id="filtro-ano-desde" min="1900" max="2099" placeholder="Ej: 2000">
+                </label>
+                <label>Año hasta:
+                    <input type="number" id="filtro-ano-hasta" min="1900" max="2099" placeholder="Ej: 2025">
+                </label>
+                <label>Duración:
+                    <select id="filtro-duracion">
+                        <option value="">Todas</option>
+                        <option value="1">Hasta 90 min</option>
+                        <option value="2">91 a 120 min</option>
+                        <option value="3">Más de 120 min</option>
+                    </select>
+                </label>
+                <button type="submit" class="btn-filtrar">Aplicar Filtros</button>
+            </form>
+        </div>
+    </div>
+
     <script src="../js/catalogo.js"></script>
 </body>
+
 </html>

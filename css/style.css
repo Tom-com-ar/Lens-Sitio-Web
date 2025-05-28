@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
+    font-family: "Rubik", sans-serif;
 }
 
 .menu-superior {
@@ -31,8 +34,192 @@ body {
     margin: 0;
     background-color: #000;
     color: white;
-    font-family: sans-serif;
 }
+
+
+.inicio-form-page {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.registro-form-page {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: #d3d3d3;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    height: 430px;
+}
+
+.register-container {
+    background-color: #d3d3d3;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    height: 520px;
+}
+
+.inicio-form-page .logo {
+    margin-top: -70px;
+    margin-bottom: 30px;
+}
+
+.inicio-form-page .logo img {
+    margin-right: 55px;
+    max-width: 120px;
+    height: auto;
+}
+
+.inicio-form-page h1 {
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.inicio-form-page .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.inicio-form-page .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.inicio-form-page .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.inicio-form-page button {
+    width: 100px;
+    padding: 10px;
+    background-color: #555;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.inicio-form-page button:hover {
+    background-color: #666;
+}
+
+.inicio-form-page .register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.inicio-form-page .register-link a {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.inicio-form-page .register-link a:hover {
+    text-decoration: underline;
+}
+
+.registro-form-page .logo {
+    margin-top: -70px;
+    margin-bottom: 30px;
+}
+
+
+.registro-form-page .logo img {
+    margin-right: 55px;
+    max-width: 120px;
+    height: auto;
+}
+
+.registro-form-page h1 {
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.registro-form-page .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.registro-form-page .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.registro-form-page .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.registro-form-page button {
+    width: 100px;
+    padding: 10px;
+    background-color: #555;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.registro-form-page button:hover {
+    background-color: #666;
+}
+
+.registro-form-page .register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.registro-form-page .register-link a {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.registro-form-page .register-link a:hover {
+    text-decoration: underline;
+}
+
 
 .top-bar {
     display: flex;
@@ -212,18 +399,20 @@ h2 {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    font-weight: 500;
 }
 
 
-.pelicula-page .icono-perfil, .pelicula-page .barra-busqueda {
+.pelicula-page .icono-perfil,
+.pelicula-page .barra-busqueda {
     display: none;
 }
 
-.pelicula-page .top-bar{
+.pelicula-page .top-bar {
     background-color: #00000000;
 }
 
-.pelicula-page .logo{
+.pelicula-page .logo {
     margin-left: 85px;
     z-index: 100;
 }
@@ -232,7 +421,6 @@ h2 {
     padding: 0;
     background-color: #000;
     color: white;
-    font-family: sans-serif;
     width: 320px;
     margin-left: -10px;
 }
@@ -430,13 +618,100 @@ h2 {
     height: 30px;
 }
 
+.btn-filtrar-open {
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+    background-color: #555;
+    border: solid 2px #FF9D00;
+    border-radius: 25px;
+    padding: 7px;
+}
+
+.modal-filtros {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-filtros.activo {
+    display: flex;
+}
+
+.modal-contenido {
+    background: #222;
+    color: #fff;
+    padding: 32px 28px;
+    border-radius: 18px;
+    min-width: 320px;
+    box-shadow: 0 4px 32px #000a;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cerrar-modal {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#form-filtros label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    gap: 4px;
+}
+
+#form-filtros input,
+#form-filtros select {
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 2px;
+}
+
+.btn-filtrar {
+    background: #FF9D00;
+    color: #222;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 18px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
 @media (min-width: 375px) {
+    .inicio-form-page .logo img {
+        margin-left: -25px;
+        max-width: 120px;
+        height: auto;
+    }
+
+    .registro-form-page .logo img {
+        margin-left: -25px;
+        max-width: 120px;
+        height: auto;
+    }
+
     .pelicula-page .logo {
         margin-left: 115px;
     }
 
-    .logo{
+    .logo {
         margin-left: 75px;
     }
 
@@ -453,7 +728,7 @@ h2 {
     }
 
     .comment-icon-placeholder {
-        top:-30px;
+        top: -30px;
         right: 310px;
         width: 40px;
         height: 40px;
@@ -464,11 +739,11 @@ h2 {
         height: 25px;
     }
 
-    .movie-info-section{
+    .movie-info-section {
         margin-top: 25px;
     }
 
-    .movie-info-section{
+    .movie-info-section {
         margin-left: 30px;
         width: 100%;
     }
@@ -497,7 +772,7 @@ h2 {
     .movie-synopsis,
     .movie-actors-list {
         font-size: 17px;
-        margin-bottom:60px;
+        margin-bottom: 60px;
     }
 
     .video-player-placeholder {
@@ -512,11 +787,23 @@ h2 {
 
 
 @media (min-width: 425px) {
+    .inicio-form-page .logo img {
+        margin-left: -40px;
+        max-width: 120px;
+        height: auto;
+    }
+
+    .registro-form-page .logo img {
+        margin-left: -40px;
+        max-width: 120px;
+        height: auto;
+    }
+
     .pelicula-page .logo {
         margin-left: 140px;
     }
 
-    .logo{
+    .logo {
         margin-left: 95px;
     }
 
@@ -529,8 +816,8 @@ h2 {
         height: 150px;
     }
 
-     .movie-detail-page {
-        margin-top:10px;
+    .movie-detail-page {
+        margin-top: 10px;
         margin-left: 4px;
     }
 
@@ -555,7 +842,7 @@ h2 {
         height: 28px;
     }
 
-    .movie-info-section{
+    .movie-info-section {
         margin-top: 25px;
         margin-left: 40px;
     }
@@ -587,7 +874,7 @@ h2 {
         font-size: 18px;
     }
 
-     .video-player-placeholder {
+    .video-player-placeholder {
         height: 280px;
     }
 
@@ -599,6 +886,108 @@ h2 {
 
 
 @media (min-width: 768px) {
+    .login-container {
+        width: 530px;
+        height: 600px;
+    }
+
+    .inicio-form-page .logo {
+        margin-top: -80px;
+        margin-bottom: 105px;
+    }
+
+    .inicio-form-page .logo img {
+        margin-left: -40px;
+        max-width: 220px;
+        height: 85px;
+    }
+
+    .inicio-form-page h1 {
+        margin-top: -45px;
+        font-size: 36px;
+    }
+
+    .inicio-form-page .input-group {
+        margin-top: 25px;
+        margin-left: 50px;
+    }
+
+    .inicio-form-page .input-group label {
+        font-size: 20px;
+    }
+
+    .inicio-form-page .input-group input {
+        width: 350px;
+        height: 70px;
+    }
+
+    .inicio-form-page button {
+        margin-top: 50px;
+        width: 165px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .inicio-form-page .login-container p {
+        margin-top: 55px;
+        font-size: 20px;
+    }
+
+    .register-container {
+        width: 530px;
+        height: 650px;
+    }
+
+    .registro-form-page .logo {
+        margin-top: -80px;
+        margin-bottom: 105px;
+    }
+
+    .registro-form-page .logo img {
+        margin-left: -40px;
+        max-width: 220px;
+        height: 85px;
+    }
+
+    .registro-form-page h1 {
+        margin-top: -45px;
+        font-size: 36px;
+    }
+
+    .registro-form-page .input-group {
+        margin-top: 25px;
+        margin-left: 50px;
+    }
+
+    .registro-form-page .input-group label {
+        font-size: 20px;
+    }
+
+    .registro-form-page .input-group input {
+        width: 350px;
+        height: 70px;
+    }
+
+    .registro-form-page button {
+        margin-top: 20px;
+        width: 165px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .registro-form-page .register-container p {
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    .index-page .logo {
+        margin-left: 260px;
+    }
+
+    .catalogo-page .logo {
+        margin-left: 260px;
+    }
+
     .pelicula-page .logo {
         margin-left: 320px;
     }
@@ -613,7 +1002,7 @@ h2 {
 
     .movie-detail-page {
         padding: 30px;
-        flex-direction: row; 
+        flex-direction: row;
         gap: 30px;
         width: 700px;
         margin-top: 50px;
@@ -625,8 +1014,8 @@ h2 {
         width: 400px;
     }
 
-     .movie-overlay {
-        padding: 40px 20px 20px 20px; 
+    .movie-overlay {
+        padding: 40px 20px 20px 20px;
     }
 
     .comment-icon-placeholder {
@@ -692,7 +1081,7 @@ h2 {
 
     .video-player-placeholder {
         width: 100%;
-        height: 300px; 
+        height: 300px;
         margin: 20px 0;
     }
 
@@ -703,6 +1092,18 @@ h2 {
 }
 
 @media (min-width: 1024px) {
+
+    .inicio-form-page .logo img {
+        margin-left: -40px;
+        max-width: 220px;
+        height: 85px;
+    }
+
+    .registro-form-page .logo img {
+        margin-left: -40px;
+        max-width: 220px;
+        height: 85px;
+    }
 
     .populares {
         display: none;
@@ -798,12 +1199,17 @@ h2 {
         display: none;
     }
 
-    .logo{
+    .index-page .logo {
         width: 125px;
         margin-left: 30px;
     }
 
-    .pelicula-page .logo{
+    .catalogo-page .logo {
+        width: 125px;
+        margin-left: 30px;
+    }
+
+    .pelicula-page .logo {
         width: 125px;
         margin-left: 10px;
     }
@@ -977,10 +1383,11 @@ h2 {
         text-shadow: 1px 1px 4px #000;
     }
 
-    .titulo-flecha{
+    .titulo-flecha {
         margin-left: 25px;
         margin-right: 25px;
     }
+
     .titulo-flecha h2 {
         margin-top: 45px;
         font-size: 24px;
@@ -988,23 +1395,29 @@ h2 {
         color: #fff;
     }
 
-    .index-page .titulo-flecha{
+    .btn-filtrar-open {
+        font-size: 16px;
+        margin-top: 45px;
+        padding: 9px;
+    }
+
+    .index-page .titulo-flecha {
         margin-bottom: 25px;
     }
 
-    .filtros-contenedor{
+    .filtros-contenedor {
         margin-top: 45px;
     }
 
-    .vermas-contenedor{
+    .vermas-contenedor {
         margin-top: 45px;
     }
 
-    .vermas-contenedor{
+    .vermas-contenedor span {
         font-size: 24px;
     }
 
-    .filtros-contenedor span  {
+    .filtros-contenedor span {
         font-size: 24px;
     }
 
@@ -1032,18 +1445,18 @@ h2 {
     .movie-poster-container {
         width: 260px;
         height: 430px;
-        margin-left: 20px;
+        margin-left: 30px;
         margin-top: -30px;
     }
 
-    .movie-info-section{
+    .movie-info-section {
         padding: 50px;
         width: 500px;
-        background-color: #353535;        
+        background-color: #353535;
         margin-top: -435px;
         margin-left: 350px;
         border-radius: 50px;
-        
+
     }
 
     .movie-overlay {
@@ -1118,12 +1531,106 @@ h2 {
         height: 90px;
     }
 
-    .pelicula-page .logo{
+    .pelicula-page .logo {
         margin-left: 25px;
     }
 }
 
 @media (min-width: 1440px) {
+
+    .login-container {
+        width: 760px;
+        height: 800px;
+    }
+
+    .inicio-form-page .logo {
+        margin-top: -80px;
+        margin-bottom: 105px;
+    }
+
+    .inicio-form-page .logo img {
+        margin-left: 200px;
+        max-width: 220px;
+        height: 85px;
+    }
+
+    .inicio-form-page h1 {
+        margin-top: -85px;
+        font-size: 52px;
+    }
+
+    .inicio-form-page .input-group {
+        margin-top: 75px;
+        margin-left: 85px;
+    }
+
+    .inicio-form-page .input-group label {
+        font-size: 25px;
+    }
+
+    .inicio-form-page .input-group input {
+        width: 510px;
+        height: 75px;
+    }
+
+    .inicio-form-page button {
+        margin-top: 50px;
+        width: 220px;
+        height: 80px;
+        font-size: 25px;
+    }
+
+    .inicio-form-page .login-container p {
+        margin-top: 75px;
+        font-size: 30px;
+    }
+
+    .register-container {
+        width: 760px;
+        height: 800px;
+    }
+
+    .registro-form-page .logo {
+        margin-top: -80px;
+        margin-bottom: 105px;
+    }
+
+    .registro-form-page .logo img {
+        margin-left: 200px;
+        max-width: 220px;
+        height: 85px;
+    }
+
+    .registro-form-page h1 {
+        margin-top: -85px;
+        font-size: 52px;
+    }
+
+    .registro-form-page .input-group {
+        margin-top: 35px;
+        margin-left: 85px;
+    }
+
+    .registro-form-page .input-group label {
+        font-size: 25px;
+    }
+
+    .registro-form-page .input-group input {
+        width: 510px;
+        height: 75px;
+    }
+
+    .registro-form-page button {
+        margin-top: 20px;
+        width: 220px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    .registro-form-page .register-container p {
+        margin-top: 55px;
+        font-size: 30px;
+    }
 
     .recomendados-size {
         display: flex;
@@ -1248,17 +1755,14 @@ h2 {
         font-size: 28px;
     }
 
-    .vermas-contenedor span{
+    .vermas-contenedor span {
         font-size: 28px;
     }
 
-    .filtros-contenedor span  {
-        font-size: 28px;
-    }
-
-    .filtros-contenedor img {
-        width: 30px;
-        height: 30px;
+    .btn-filtrar-open {
+        font-size: 20px;
+        margin-top: 45px;
+        padding: 12px;
     }
 
     .movie-detail-page {
@@ -1271,6 +1775,7 @@ h2 {
         width: 400px;
         height: 650px;
         margin-top: 25px;
+        margin-left: 60px;
     }
 
     .movie-overlay {
@@ -1289,7 +1794,7 @@ h2 {
         height: 35px;
     }
 
-    .movie-info-section{
+    .movie-info-section {
         padding: 50px;
         width: 700px;
         background-color: #353535;
@@ -1505,7 +2010,7 @@ h2 {
         font-size: 32px;
     }
 
-    .filtros-contenedor span  {
+    .filtros-contenedor span {
         font-size: 32px;
     }
 
@@ -1518,15 +2023,15 @@ h2 {
         padding: 60px;
         gap: 60px;
         width: 1800px;
-        margin-left: 450px;
+        margin-left: 200px;
     }
 
     .movie-poster-container {
         width: 450px;
-        
+
     }
 
-    .movie-info-section{
+    .movie-info-section {
         width: 900px;
     }
 
