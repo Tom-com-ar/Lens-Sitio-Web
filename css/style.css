@@ -694,6 +694,163 @@ h2 {
     margin-top: 10px;
 }
 
+.entradas-page {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+.compra-entradas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #505050;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.sala-cine {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.letras-filas {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+    font-weight: bold;
+    font-size: 10px;
+    gap: 9px;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.letras-filas span {
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.butacas-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 14px);
+    grid-template-rows: repeat(10, 14px);
+    gap: 7px;
+    background: none;
+}
+
+.butaca {
+    width: 14px;
+    height: 14px;
+    border-radius: 0 0 12px 12px;
+    background: #d9d9d9;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px #0002;
+    transition: background 0.2s, border 0.2s;
+    position: relative;
+}
+
+.butaca.disponible {
+    background: #d9d9d9;
+}
+
+.butaca.seleccionado {
+    background: #FF9D00;
+    border: 2px solid #FF9D00;
+}
+
+.butaca.ocupado {
+    background: #222;
+    cursor: not-allowed;
+    border: 2px solid #222;
+}
+
+.butaca:hover:not(.ocupado) {
+    transform: scale(1.1);
+}
+
+.leyenda-butacas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 8px 0;
+    margin: 18px 0 10px 0;
+    font-size: 14px;
+    gap: 18px;
+    color: #fff;
+}
+
+.leyenda-butacas .butaca {
+    box-shadow: none;
+    border: none;
+    width: 16px;
+    height: 16px;
+}
+
+.butacas-seleccionadas {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #fff;
+}
+
+.icono-persona {
+    width: 20px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    background-image: url('../../img/User.png');
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-comprar-entradas {
+    width: 200px;
+    background: #d9d9d9;
+    color: #111;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-comprar-entradas:hover {
+    background: #FF9D00;
+    color: #fff;
+}
+
+.pantalla-cine{
+    width: 320px;
+    height: 23px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+
+.title-pantalla{
+    font-size: 16px;
+    margin-left: 15px;
+}
+
 @media (min-width: 375px) {
     .inicio-form-page .logo img {
         margin-left: -25px;
@@ -1534,6 +1691,98 @@ h2 {
     .pelicula-page .logo {
         margin-left: 25px;
     }
+
+    .entradas-page {
+        margin-top: 60px;
+    }
+
+    .compra-entradas {
+        max-width: 500px;
+    }
+
+    .letras-filas {
+        font-size: 17px;
+    }
+
+    .butacas-grid {
+        grid-template-columns: repeat(12, 22px);
+        grid-template-rows: repeat(10, 22px);
+    }
+
+    .butaca {
+        width: 22px;
+        height: 22px;
+    }
+
+    .leyenda-butacas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        padding: 8px 0;
+        margin: 18px 0 10px 0;
+        font-size: 16px;
+        gap: 18px;
+        color: #fff;
+    }
+
+    .leyenda-butacas .butaca {
+        box-shadow: none;
+        border: none;
+        width: 22px;
+        height: 22px;
+    }
+
+    .butacas-seleccionadas {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 18px;
+        color: #fff;
+    }
+
+    .icono-persona {
+        width: 22px;
+        height: 24px;
+        background: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        background-image: url('../../img/User.png');
+        background-size: 60% 60%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .btn-comprar-entradas {
+        width: 200px;
+        background: #d9d9d9;
+        color: #111;
+        border: none;
+        border-radius: 16px;
+        padding: 10px 0;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 8px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    .btn-comprar-entradas:hover {
+        background: #FF9D00;
+        color: #fff;
+    }
+
+    .pantalla-cine{
+        width: 420px;
+        height: 40px;
+        margin-left: 19px;
+    }
+
+    .title-pantalla{
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -1855,7 +2104,6 @@ h2 {
 }
 
 @media (min-width: 1920px) {
-
 
     .recomendados-size {
         display: flex;
