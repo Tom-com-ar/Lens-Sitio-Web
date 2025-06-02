@@ -36,7 +36,6 @@ body {
     color: white;
 }
 
-
 .inicio-form-page {
     background: #000;
     display: flex;
@@ -151,7 +150,6 @@ body {
     margin-bottom: 30px;
 }
 
-
 .registro-form-page .logo img {
     margin-right: 55px;
     max-width: 120px;
@@ -220,7 +218,6 @@ body {
     text-decoration: underline;
 }
 
-
 .top-bar {
     display: flex;
     align-items: center;
@@ -229,7 +226,16 @@ body {
     background-color: #111;
 }
 
-.barra-busqueda {
+.index-page .barra-busqueda,
+.index-page .barra-busqueda input,
+.reseñas-page .barra-busqueda,
+.reseñas-page .barra-busqueda input,
+.comentarios-page .barra-busqueda,
+.comentarios-page .barra-busqueda input {
+    display: none;
+}
+
+.catalogo-page .barra-busqueda {
     display: flex;
     align-items: center;
     background: #FF9D00;
@@ -242,7 +248,7 @@ body {
     overflow: hidden;
 }
 
-.barra-busqueda input {
+.catalogo-page .barra-busqueda input {
     border: none;
     outline: none;
     background: transparent;
@@ -256,7 +262,6 @@ body {
     opacity: 1;
     min-width: 200px;
 }
-
 
 .icono-perfil {
     width: 32px;
@@ -388,21 +393,6 @@ h2 {
     height: 22px;
 }
 
-.btn-mas {
-    display: block;
-    margin: 20px auto 80px auto;
-    padding: 10px 30px;
-    background: #FF9D00;
-    color: #111;
-    border: none;
-    border-radius: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-
 .pelicula-page .icono-perfil,
 .pelicula-page .barra-busqueda {
     display: none;
@@ -432,7 +422,6 @@ h2 {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-top: -80px;
-
 }
 
 .movie-poster {
@@ -695,6 +684,7 @@ h2 {
 }
 
 .entradas-page {
+    margin-bottom: 100px;
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -807,19 +797,13 @@ h2 {
     color: #fff;
 }
 
-.icono-persona {
-    width: 20px;
-    height: 22px;
-    background: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    background-image: url('../../img/User.png');
-    background-size: 60% 60%;
-    background-repeat: no-repeat;
-    background-position: center;
+.butacas-texto {
+    width: 100%;
 }
 
-.btn-comprar-entradas {
+.btn-comprar-entradas,
+.btn-borrar-seleccion,
+.btn-volver-atras {
     width: 200px;
     background: #d9d9d9;
     color: #111;
@@ -838,7 +822,33 @@ h2 {
     color: #fff;
 }
 
-.pantalla-cine{
+.btn-borrar-seleccion:hover {
+    background: #FF9D00;
+    color: #fff;
+}
+
+.btn-volver-atras:hover {
+    background: #FF9D00;
+    color: #fff;
+}
+
+.boton-reseñas {
+    width: 200px;
+    background: #d9d9d9;
+    color: #111;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 25px;
+    margin-left: 3px;
+}
+
+.pantalla-cine {
     width: 320px;
     height: 23px;
     border-radius: 8px;
@@ -846,12 +856,170 @@ h2 {
     margin-left: 12px;
 }
 
-.title-pantalla{
+.title-pantalla {
     font-size: 16px;
     margin-left: 15px;
 }
 
+.movie-title-butacas {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.movie-info-section-butacas {
+    display: none;
+}
+
+.reseña-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.reseña-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 24px;
+}
+
+#reseña-form {
+    background: #d3d3d3;
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#reseña-form label {
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+}
+
+#reseña-form input[type="text"],
+#reseña-form textarea {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+}
+
+#reseña-form textarea {
+    resize: vertical;
+}
+
+.boton-enviar-reseña {
+    background: #FF9D00;
+    color: #000;
+    border: none;
+    border-radius: 16px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.boton-enviar-reseña:hover {
+    background: #ffb84d;
+}
+
+.comentarios-section {
+    margin-left: 0px;
+}
+
+.comentarios-section h2 {
+    text-align: center;
+    width: 300px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+}
+
+#comentarios-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.comentario-tarjeta {
+    background: #d3d3d3;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.icono-usuario-comentario img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.contenido-comentario {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nombre-pelicula-comentario {
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+}
+
+.texto-comentario {
+    color: #333;
+    font-size: 12px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.mensaje-sin-comentarios {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: #222;
+    border-radius: 10px;
+    margin: 15px auto;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 300px;
+}
+
 @media (min-width: 375px) {
+    .comentarios-section h2{
+        margin-left: 25px;
+    }
+
     .inicio-form-page .logo img {
         margin-left: -25px;
         max-width: 120px;
@@ -940,10 +1108,18 @@ h2 {
         width: 70px;
         height: 70px;
     }
+
+    .boton-reseñas {
+        margin-left: 5px;
+        width: 150px;
+    }
 }
 
-
 @media (min-width: 425px) {
+    .comentarios-section h2{
+        margin-left: 45px;
+    }
+
     .inicio-form-page .logo img {
         margin-left: -40px;
         max-width: 120px;
@@ -963,7 +1139,6 @@ h2 {
     .logo {
         margin-left: 95px;
     }
-
 
     .grid-peliculas {
         grid-template-columns: repeat(4, 1fr);
@@ -1041,8 +1216,11 @@ h2 {
     }
 }
 
-
 @media (min-width: 768px) {
+    .comentarios-section h2{
+        margin-left: 225px;
+    }
+
     .login-container {
         width: 530px;
         height: 600px;
@@ -1137,7 +1315,9 @@ h2 {
         font-size: 20px;
     }
 
-    .index-page .logo {
+    .index-page .logo,
+    .reseñas-page .logo,
+    .comentarios-page .logo {
         margin-left: 260px;
     }
 
@@ -1216,7 +1396,7 @@ h2 {
         width: auto;
         max-width: none;
         display: inline-block;
-        margin-left: 225px;
+        margin-left: 140px;
         padding: 12px 20px;
         margin-bottom: 25px;
     }
@@ -1249,7 +1429,6 @@ h2 {
 }
 
 @media (min-width: 1024px) {
-
     .inicio-form-page .logo img {
         margin-left: -40px;
         max-width: 220px;
@@ -1351,7 +1530,6 @@ h2 {
         color: #fff;
     }
 
-
     .menu-inferior {
         display: none;
     }
@@ -1361,7 +1539,9 @@ h2 {
         margin-left: 30px;
     }
 
-    .catalogo-page .logo {
+    .catalogo-page .logo,
+    .reseñas-page .logo,
+    .comentarios-page .logo {
         width: 125px;
         margin-left: 30px;
     }
@@ -1443,6 +1623,11 @@ h2 {
         background: #444;
     }
 
+    .catalogo-page .barra-busqueda,
+    .catalogo-page .barra-busqueda input {
+        display: none;
+    }
+
     .barra-busqueda-nav {
         display: flex;
         align-items: center;
@@ -1505,7 +1690,6 @@ h2 {
     .index-page .grid-peliculas-size {
         display: grid !important;
     }
-
 
     .grid-peliculas-size {
         display: grid;
@@ -1613,7 +1797,6 @@ h2 {
         margin-top: -435px;
         margin-left: 350px;
         border-radius: 50px;
-
     }
 
     .movie-overlay {
@@ -1669,6 +1852,10 @@ h2 {
         font-size: 30px;
         margin-top: 30px;
         margin-bottom: 15px;
+    }
+
+    .boton-reseñas {
+        margin-left: 125px;
     }
 
     .movie-synopsis,
@@ -1774,25 +1961,100 @@ h2 {
         color: #fff;
     }
 
-    .pantalla-cine{
+    .pantalla-cine {
         width: 420px;
         height: 40px;
         margin-left: 19px;
     }
 
-    .title-pantalla{
+    .title-pantalla {
         font-size: 20px;
     }
+
+    .movie-info-section-butacas {
+        width: 200px;
+        height: 430px;
+        margin-left: 30px;
+        margin-right: 90px;
+        display: flex;
+        border-radius: 50px;
+    }
+
+    .movie-poster-container-butacas img {
+        width: 280px;
+        height: 450px;
+        margin-left: -50px;
+        border-radius: 35px;
+    }
+
+    .movie-metadata-butacas {
+        margin-top: 500px;
+        margin-right: -100px;
+        margin-left: -280px;
+        width: 280px;
+        height: 400px;
+    }
+
+    .movie-genre-butacas {
+        margin-top: -30px;
+        margin-bottom: 25px;
+        font-size: 18px;
+        width: 280px;
+    }
+
+    .comentarios-section {
+        padding: 20px;
+   }
+    .comentarios-section h2 {
+       font-size: 24px;
+       margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+   }
+   #comentarios-container {
+       gap: 15px;
+       width: 600px;
+        margin: 10px auto;
+        display: flex;
+       flex-direction: column;
+   }
+    .comentario-tarjeta {
+       padding: 15px;
+       gap: 15px;
+       max-width: none;
+        margin: 0 auto;
+        display: flex;
+       align-items: flex-start;
+        width: 100%;
+   }
+     .icono-usuario-comentario img {
+       width: 40px;
+       height: 40px;
+   }
+   .nombre-pelicula-comentario {
+       font-size: 16px;
+   }
+
+   .texto-comentario {
+       font-size: 14px;
+   }
+
+    .mensaje-sin-comentarios {
+       padding: 20px;
+       font-size: 16px;
+       max-width: 600px;
+    margin: 20px auto;
+   }
 }
 
 @media (min-width: 1440px) {
-
     .login-container {
         width: 760px;
         height: 800px;
     }
 
-    .inicio-form-page .logo {
+    .inicio-form-page .logo img {
         margin-top: -80px;
         margin-bottom: 105px;
     }
@@ -1994,11 +2256,9 @@ h2 {
         grid-template-columns: repeat(5, 1fr);
     }
 
-
     .catalogo-page .grid-peliculas {
         grid-template-columns: repeat(7, 1fr);
     }
-
 
     .titulo-flecha h2 {
         font-size: 28px;
@@ -2043,68 +2303,62 @@ h2 {
         height: 35px;
     }
 
-    .movie-info-section {
-        padding: 50px;
-        width: 700px;
-        background-color: #353535;
-        margin-left: 550px;
-        margin-top: -660px;
-    }
-
     .movie-title {
-        font-size: 60px;
-        margin-bottom: 20px;
-    }
-
-    .movie-metadata {
-        font-size: 24px;
-        margin-top: 10px;
-        margin-bottom: 15px;
-    }
-
-    .movie-metadata span {
-        margin-right: 25px;
-    }
-
-    .movie-rating {
-        font-size: 50px;
-        margin-top: 15px;
+        font-size: 72px;
         margin-bottom: 25px;
     }
 
-    .buy-tickets-button {
-        width: 300px;
-        padding: 18px 40px;
+    .movie-metadata {
         font-size: 22px;
-        margin: 30px 150px;
+        margin-top: 12px;
+        margin-bottom: 18px;
+    }
+
+    .movie-metadata span {
+        margin-right: 30px;
+    }
+
+    .movie-rating {
+        font-size: 48px;
+        margin-top: 18px;
+        margin-bottom: 30px;
+    }
+
+    .buy-tickets-button {
+        padding: 20px 35px;
+        font-size: 24px;
+        margin: 35px 250px;
+    }
+
+    .boton-reseñas {
+        margin-left: 330px;
     }
 
     .actors-title {
-        font-size: 32px;
-        margin-top: 30px;
-        margin-bottom: 15px;
+        font-size: 36px;
+        margin-top: 35px;
+        margin-bottom: 18px;
     }
 
     .movie-synopsis,
     .movie-actors-list {
         font-size: 22px;
-        margin-bottom: 30px;
+        margin-bottom: 35px;
     }
 
     .video-player-placeholder {
-        width: 500px;
-        height: 300px;
-        margin: 30px 50px;
+        width: 600px;
+        height: 350px;
+        margin: 35px 100px;
     }
 
     .play-icon {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
     }
 }
 
 @media (min-width: 1920px) {
-
     .recomendados-size {
         display: flex;
         gap: 40px;
@@ -2271,12 +2525,11 @@ h2 {
         padding: 60px;
         gap: 60px;
         width: 1800px;
-        margin-left: 200px;
+        margin-left: 300px;
     }
 
     .movie-poster-container {
         width: 450px;
-
     }
 
     .movie-info-section {
@@ -2324,6 +2577,10 @@ h2 {
         padding: 20px 35px;
         font-size: 24px;
         margin: 35px 250px;
+    }
+
+    .boton-reseñas {
+        margin-left: 330px;
     }
 
     .actors-title {

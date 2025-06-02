@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Lens - Comentarios</title>
+</head>
+<body class="comentarios-page">
+    <header class="top-bar">
+        <img src="../img/User.png" alt="Perfil" class="icono-perfil" />
+        <img src="../img/logo.png" alt="Logo Cine Lens" class="logo" />
+        <div class="barra-busqueda">
+            <input type="text" placeholder="Buscar..." />
+        </div>
+        <nav class="menu-superior">
+            <a href="/index.html" class="menu-link">Inicio</a>
+            <a href="../pages/catalogo.html" class="menu-link">Catalogo</a>
+            <a href="#" class="menu-link">Comentarios</a>
+            <div class="barra-busqueda-nav">
+                <input type="text" placeholder="Buscar..." />
+                <button class="btn-buscar"><img src="/img/busqueda-de-lupa.png" alt="Buscar"></button>
+            </div>
+        </nav>
+        <div class="usuario-menu">
+            <img src="../img/User.png" alt="Perfil" class="icono-perfil-nav" />
+            <span class="usuario-nombre">Usuario</span>
+            <img src="../img/flecha-correcta.png" alt="Desplegar" class="flecha-usuario" />
+        </div>
+    </header>
+
+    <main class="contenido">
+        <section class="comentarios-section">
+            <h2>Comentarios de Películas</h2>
+            <div id="comentarios-container">
+                <!-- Los comentarios se cargarán aquí -->
+            </div>
+        </section>
+    </main>
+
+    <nav class="menu-inferior">
+        <a href="/index.html"><button> <img src="../img/casa.png" alt="casa-index"></button></a>
+        <a href="../pages/catalogo.html"><button> <img src="../img/categoria.png" alt="catalogo"></button></a>
+        <a href="#"><button> <img src="../img/msj.png" alt=""></button></a>
+    </nav>
+
+    <script src="../js/lista-comentarios.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

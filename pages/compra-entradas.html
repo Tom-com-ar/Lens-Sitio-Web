@@ -32,7 +32,19 @@
     </header>
 
     <main class="entradas-page">
+        <section class="movie-info-section-butacas">
+            <div class="movie-poster-container-butacas">
+                <img src="" alt="" class="movie-poster-butacas">
+            </div>
+            <div class="movie-metadata-butacas">
+                <p class="movie-genre-butacas"></p> 
+                <p class="movie-synopsis-butacas"></p>
+            </div>
+        </section>
+        
+
         <section class="compra-entradas">
+            <h1 class="movie-title-butacas"></h1>
             <svg class="pantalla-cine" viewBox="0 0 319 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M7.29742 15C6.70078 15 6.13934 14.7247 5.77599 14.2539L3.7008 11.5651C2.76313 10.3502 3.46001 8.58431 4.98957 8.39741C18.8926 6.69849 74.6484 0.606465 157.397 0.869684C202.894 1.01441 254.962 3.658 313.347 8.68218C314.952 8.8203 315.732 10.705 314.697 11.9469L312.736 14.2986C312.365 14.7428 311.817 15 311.241 15L7.29742 15Z"
@@ -61,21 +73,23 @@
                 <span><span class="butaca ocupado"></span> Ocupado</span>
             </div>
             <div class="butacas-seleccionadas">
-                <span class="icono-persona"></span>
-                <span class="butacas-texto">Ninguna</span>
+                <span class="butacas-texto">Ninguna Seleccionada</span>
             </div>
             <button class="btn-comprar-entradas">Comprar Entradas</button>
+            <button class="btn-borrar-seleccion">Borrar Selección</button>
+            <button class="btn-volver-atras">Volver Atrás</button>
         </section>
     </main>
 
     <nav class="menu-inferior">
-        <a href="../../index.html"><button> <img src="../../img/casa.png" alt="casa-index"></button></a>
-        <a href="../catalogo.html"><button> <img src="../../img/categoria.png" alt="catalogo"></button></a>
-        <a href="../lista-comentarios.html"><button> <img src="../../img/msj.png" alt=""></button></a>
+        <a href="../index.html"><button> <img src="../../img/casa.png" alt="casa-index"></button></a>
+        <a href="../pages/catalogo.html"><button> <img src="../../img/categoria.png" alt="catalogo"></button></a>
+        <a href="../pages/lista-comentarios.html"><button> <img src="../../img/msj.png" alt=""></button></a>
     </nav>
 
-    <script src="../js/pelicula.js"></script>
     <script src="../js/entradas.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 
+</html>
 </html>

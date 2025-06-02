@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ocultar el mensaje de video por defecto
     if (videoMessageElement) {
         videoMessageElement.style.display = 'none';
-        videoMessageElement.style.color = 'white'; // Asegurar que el texto sea visible si se muestra
+        videoMessageElement.style.color = 'white'; 
         videoMessageElement.style.textAlign = 'center';
         videoMessageElement.style.marginTop = '20px';
     }
@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
             .then(() => {
-                // Obtener los créditos (actores) de la película
                 return fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=es-ES`);
             })
             .then(res => res.json())
@@ -122,6 +121,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     actorsListElement.textContent = principalActors;
                 } else if (actorsListElement) {
                      actorsListElement.textContent = 'Información de actores no disponible.';
+                }
+
+                const btnComprarEntradas = document.getElementById('btn-comprar-entradas');
+                if (btnComprarEntradas) {
+                    btnComprarEntradas.addEventListener('click', () => {
+                        window.location.href = `../compra-entradas.html?id=${movieId}`;
+                    });
+                }
+
+                const btnReseñas = document.getElementById('btn-reseñas');
+                if (btnReseñas) {
+                    btnReseñas.addEventListener('click', () => {
+                        window.location.href = `../reseñas.html?id=${movieId}`;
+                    });
                 }
             })
             .catch(error => {
