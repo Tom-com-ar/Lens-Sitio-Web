@@ -2274,17 +2274,23 @@ h2 {
         padding: 12px;
     }
 
+    .movie-info-section{
+        margin-top: -600px;
+        margin-left: 500px;
+        width: 750px;
+    }
+    
+    .movie-poster-container{
+        width: 400px;
+        height: 600px;
+        margin-left: 50px;
+        margin-top: -50px;
+    }
+
     .movie-detail-page {
         padding: 50px;
         gap: 50px;
         max-width: 1600px;
-    }
-
-    .movie-poster-container {
-        width: 400px;
-        height: 650px;
-        margin-top: 25px;
-        margin-left: 60px;
     }
 
     .movie-overlay {
@@ -2325,13 +2331,13 @@ h2 {
     }
 
     .buy-tickets-button {
-        padding: 20px 35px;
+        padding: 20px 65px;
         font-size: 24px;
-        margin: 35px 250px;
+        margin: 35px 200px;
     }
 
     .boton-reseñas {
-        margin-left: 330px;
+        margin-left: 250px;
     }
 
     .actors-title {
@@ -2349,7 +2355,7 @@ h2 {
     .video-player-placeholder {
         width: 600px;
         height: 350px;
-        margin: 35px 100px;
+        margin: 35px 30px;
     }
 
     .play-icon {
@@ -2525,15 +2531,17 @@ h2 {
         padding: 60px;
         gap: 60px;
         width: 1800px;
-        margin-left: 300px;
+        margin-left: 200px;
     }
 
     .movie-poster-container {
         width: 450px;
+        height: auto;
     }
 
     .movie-info-section {
         width: 900px;
+        margin-top: -600px;
     }
 
     .movie-overlay {
