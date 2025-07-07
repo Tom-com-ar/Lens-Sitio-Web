@@ -1,0 +1,235 @@
+/* Estilos generales para las páginas de formulario (Inicio de Sesión y Registro) */
+
+.form-page {
+    background: #000000;
+    color: #e2e8f0; /* Texto blanco grisáceo */
+    font-family: sans-serif; /* Fuente similar a la de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.form-container {
+    background-color: #4e4e4e; /* Un tono de azul oscuro ligeramente más claro que el fondo */
+    padding: 40px;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    position: relative; /* Añadido para posicionar el close-button */
+}
+
+.form-title {
+    font-size: 2em; /* Tamaño del título principal */
+    margin-bottom: 10px;
+    color: #f1f5f9; /* Texto casi blanco para títulos */
+}
+
+.form-subtitle {
+    font-size: 1em;
+    color: #ffffff; /* Texto gris claro para subtítulos */
+    margin-bottom: 30px;
+}
+
+.mensaje-error, .mensaje-exito {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.mensaje-error {
+    background-color: #fecaca; /* Rojo muy claro */
+    color: #b91c1c; /* Rojo oscuro */
+    border: 1px solid #ef4444;
+}
+
+.mensaje-exito {
+    background-color: #dcfce7; /* Verde muy claro */
+    color: #166534; /* Verde oscuro */
+     border: 1px solid #22c55e;
+}
+
+/* Iconos para botones sociales (usando los SVGs base64 existentes) */
+
+.separator {
+    margin: 25px 0;
+    font-size: 0.9em;
+    color: #ffffff; /* Color del texto 'O' */
+    position: relative;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%; /* Longitud de la línea */
+    height: 1px; /* Grosor de la línea */
+    background-color: #FF9D00; /* Color de la línea separadora */
+}
+
+.separator::before {
+    left: 0;
+}
+
+.separator::after {
+    right: 0;
+}
+
+.input-group {
+    margin-bottom: 20px; /* Espacio entre grupos de input */
+    text-align: left; /* Alinear label e input a la izquierda si se añaden labels */
+     position: relative; /* Para posicionar iconos dentro */
+}
+
+/* Estilo para inputs sin label */
+.input-group input[type="text"], 
+.input-group input[type="email"], 
+.input-group input[type="password"] {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 12px;
+    /* padding-left: 12px; Si se añade un icono interno, ajustar este padding */
+    border: 1px solid #FF9D00; /* Borde del input */
+    border-radius: 6px; /* Bordes redondeados */
+    background-color: #727272; /* Fondo del input */
+    color: #ffffff; /* Color del texto del input */
+    font-size: 1em;
+    box-sizing: border-box; /* Incluir padding y borde en el ancho */
+     outline: none; /* Eliminar el outline por defecto */
+     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #fdc569; /* Color del borde al enfocar */
+    box-shadow: 0 0 0 3px rgba(255, 174, 0, 0.616); /* Sombra al enfocar */
+}
+
+.input-group input::placeholder {
+    color: rgb(255, 209, 122); /* Color del placeholder */
+}
+
+/* Iconos dentro de los inputs (ejemplo, puedes añadir SVG o usar fuentes de iconos) */
+/*
+.input-group .icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    pointer-events: none; // Para que el icono no interfiera con el input
+}
+*/
+
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+
+.options-row label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #ffffff; /* Color del texto de la etiqueta */
+}
+
+.options-row input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #ffffff; /* Color del checkbox */
+}
+
+.forgot-password {
+    color: white; /* Color similar al de la imagen */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.forgot-password:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+    color: #e2e8f0; /* Color al pasar el ratón */
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:rgba(255, 157, 0, 1);
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #ebac25; /* Tono más oscuro al pasar el ratón */
+}
+
+.signup-link {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #ffffff; /* Color del texto */
+}
+
+.signup-link a {
+    color: #FF9D00; /* Color del enlace */
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: #ffa552; /* Color al pasar el ratón */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 500px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 1.8em;
+    }
+
+    .social-login {
+        flex-direction: column; /* Apilar botones sociales en pantallas pequeñas */
+        gap: 10px;
+    }
+
+    .separator::before, .separator::after {
+        width: 30%; /* Reducir longitud de la línea del separador */
+    }
+
+    .options-row {
+        flex-direction: column; /* Apilar opciones */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .forgot-password {
+        align-self: flex-end; /* Alinear a la derecha */
+    }
+}
+
+/* Estilos para el botón de cerrar (la 'X') */
+.close-button {
+    position: absolute; /* Posicionar absolutamente dentro del contenedor con position: relative */
+    top: 15px; /* Distancia desde la parte superior */
+    right: 15px; /* Distancia desde la derecha */
+    font-size: 1.5em; /* Tamaño de la 'X' */
+    color: #ffffff; /* Color de la 'X' */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambiar cursor a mano al pasar por encima */
+    transition: color 0.2s ease; /* Transición suave de color */
+}
+
+.close-button:hover {
+    color: #ff0000; /* Cambiar color al pasar el ratón */
+} 
